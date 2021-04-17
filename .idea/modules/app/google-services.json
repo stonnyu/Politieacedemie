@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "794523480505",
+    "firebase_url": "https://pmd-politie.firebaseio.com",
+    "project_id": "pmd-politie",
+    "storage_bucket": "pmd-politie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794523480505:android:bdd6194b92543a74624668",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794523480505-8gba5tnt98873d8af1srvm48comotmkf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "f64ecc80879c4134b5229be15dd9155349b9eaa5"
+          }
+        },
+        {
+          "client_id": "794523480505-lta6sfurknple28qq0j6tqs27ev2c7vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlDzW6ebq54LRUKuPn7tTfNF4IGb7VSqo"
+        },
+        {
+          "current_key": "AIzaSyCxQmIARNBTWxpL27PrkdDE-1sgsnpSnl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794523480505-lta6sfurknple28qq0j6tqs27ev2c7vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794523480505:android:eb929a82a785402f624668",
+        "android_client_info": {
+          "package_name": "tech.tucano.pmp_politie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794523480505-0q2i32b3m5vm920lm6btkcb581qnnj6h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.tucano.pmp_politie",
+            "certificate_hash": "7b71b0208b3bf23017facf77e69a38608e73f7da"
+          }
+        },
+        {
+          "client_id": "794523480505-n6g1sl4uue3gf00dmfpcpuf8r25klc1u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.tucano.pmp_politie",
+            "certificate_hash": "f64ecc80879c4134b5229be15dd9155349b9eaa5"
+          }
+        },
+        {
+          "client_id": "794523480505-0cilq60o0jdf3gb6fa7n797hr4l1njkq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.tucano.pmp_politie",
+            "certificate_hash": "ab7cf769e71bb979980af97a8a173b1bea00cefa"
+          }
+        },
+        {
+          "client_id": "794523480505-a16njmjalo3oeamoav32nr0lku9q91af.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.tucano.pmp_politie",
+            "certificate_hash": "258cd38059e60400b04c3fc86195155f20abe61e"
+          }
+        },
+        {
+          "client_id": "794523480505-lta6sfurknple28qq0j6tqs27ev2c7vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlDzW6ebq54LRUKuPn7tTfNF4IGb7VSqo"
+        },
+        {
+          "current_key": "AIzaSyCxQmIARNBTWxpL27PrkdDE-1sgsnpSnl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794523480505-lta6sfurknple28qq0j6tqs27ev2c7vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/fragment_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="-335dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="400dp"
+        android:layout_height="237dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivGuestLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/guest_icon_description"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnGuest"
+            app:layout_constraintEnd_toEndOf="@+id/btnGuest"
+            app:layout_constraintStart_toStartOf="@+id/btnGuest"
+            app:layout_constraintTop_toTopOf="@+id/btnGuest"
+            app:srcCompat="@drawable/icon_zocial_guest"
+            app:tint="@null" />
+
+        <Button
+            android:id="@+id/btnGuest"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/outline_8dp_corners"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnPolitie"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@null" />
+
+        <TextView
+            android:id="@+id/tvGuest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/guest"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnGuest"
+            app:layout_constraintStart_toStartOf="@+id/btnGuest"
+            app:layout_constraintTop_toBottomOf="@+id/btnGuest" />
+
+        <ImageView
+            android:id="@+id/ivPolitieLogin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/politie_logo_description"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPolitie"
+            app:layout_constraintEnd_toEndOf="@+id/btnPolitie"
+            app:layout_constraintStart_toStartOf="@+id/btnPolitie"
+            app:layout_constraintTop_toTopOf="@+id/btnPolitie"
+            app:srcCompat="@drawable/logo_politie"
+            app:tint="@null"
+            tools:srcCompat="@drawable/logo_politie" />
+
+        <Button
+            android:id="@+id/btnPolitie"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/outline_8dp_corners"
+            android:textColor="#FFFFFF"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnGuest"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@null" />
+
+        <TextView
+            android:id="@+id/tvPolitie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/police"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnPolitie"
+            app:layout_constraintStart_toStartOf="@+id/btnPolitie"
+            app:layout_constraintTop_toBottomOf="@+id/btnPolitie" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivCyberCrimeLogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintBottom_toBottomOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cyber_crime_logo"
+        android:contentDescription="@string/cyber_crime_logo_description" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<resources>
+    <!-- General -->
+    <string name="login">Inloggen</string>
+    <string name="articles">Artikelen</string>
+    <string name="back_button_description">Back button</string>
+    <string name="politie_logo_description">Politie logo</string>
+    <string name="cyber_crime_logo_description">Cyber Crime Logo</string>
+    <string name="guest_icon_description">Gast icoon</string>
+
+    <!-- Homescreen -->
+    <string name="app_name">PMP_Politie</string>
+    <string name="recent">Actueel</string>
+    <string name="home">Home</string>
+    <string name="profile">Profiel</string>
+    <string name="general">Categorie</string>
+
+    <!-- Login -->
+    <string name="placeholder_email">Email</string>
+    <string name="placeholder_pass">Wachtwoord</string>
+    <string name="authentication_failed">Authenticatie mislukt!</string>
+    <string name="login_successful">Succesvol ingelogd als %1$s.</string>
+    <string name="login_failed">Inloggen mislukt.</string>
+    <string name="missing_password">Voer een wachtwoord in.</string>
+    <string name="missing_email">Voer een emailadres in.</string>
+    <string name="invalid_email">Voer een geldig emailadres in.</string>
+    <string name="police">Politie</string>
+    <string name="guest">Bezoeker</string>
+
+    <!-- Article text's -->
+    <string name="article_edit">Bewerken</string>
+    <string name="article_delete">Verwijderen</string>
+
+    <!-- Page title's -->
+    <string name="feedback">Feedback</string>
+
+    <!-- Add article form -->
+    <string name="add_article_title">Titel:</string>
+    <string name="hint_title">Title</string>
+    <string name="add_article_confidential">Vertrouwelijk:</string>
+    <string name="add_article_topic">Topic:</string>
+    <string name="add_article_text">Tekst:</string>
+    <string name="add_article_confirm">✔ Klaar! Verzenden maar!</string>
+    <string name="add_article_attach_file">📎 Bijlage Toevoegen</string>
+    <string name="add_article_recent">Actueel:</string>
+    <string name="add_article_uploading">Uploaden…</string>
+    <string name="add_article_failed">Mislukt</string>
+    <string name="add_article_uploaded">Geupload</string>
+    <string name="add_article_select_image">Selecteer Afbeelding</string>
+
+    <!-- Database Keys -->
+    <string name="db_article_title">articleTitle</string>
+    <string name="db_article_text">articleText</string>
+    <string name="db_article_topic">articleTopic</string>
+    <string name="db_recent">recent</string>
+    <string name="db_image_path">imagePath</string>
+    <string name="db_topic_articles">topicArticles</string>
+    <string name="db_article">Article</string>
+    <string name="db_topic">Topic</string>
+    <string name="db_confidential_topic">Confidential Topic</string>
+    <string name="db_confidential_identifier">Confidential/</string>
+    <string name="db_classified">class</string>
+
+    <!-- Warnings -->
+    <string name="invalid_credentials">De ingevoerde gegevens zijn ongeldig!</string>
+    <string name="confirm_check">Weet u zeker dat u door wilt gaan?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
+    <string name="okay">Oké</string>
+    <string name="button_sign_out">Log uit</string>
+    <string name="warning_delete_article">Weet u zeker dat u het artikel wilt verwijderen?</string>
+    <string name="warning_new_article">Weet u zeker dat u uw artikel wilt uploaden?</string>
+
+    <!-- Feedback form -->
+    <string name="email">Uw E-mail</string>
+    <string name="subject">Onderwerp</string>
+    <string name="feedback_button">Verzenden</string>
+    <string name="hint_feedback_message">Uw feedback voor de app</string>
+    <string name="feedback_alertdialog_message">Uw feedback is verzonden.</string>
+    <string name="feedback_alertdialog_title">Bedankt voor uw feedback</string>
+    <string name="signature_feedback">Geef feedback</string>
+
+    <!-- Profile -->
+    <string name="successful_sign_out">Succesvol uitgelogd.</string>
+    <string name="unsuccessful_sign_out">Uitloggen mislukt!</string>
+    <string name="pref_add_article">Nieuw artikel</string>
+    <string name="pref_key_sign_out">sign_out</string>
+    <string name="pref_key_feedback">feedback</string>
+    <string name="pref_key_add_article">add_article</string>
+
+    <string name="topic_no_articles">Deze categorie bevat nog geen artikelen</string>
+
+    <!-- Search -->
+    <string name="search_hint">Zoeken</string>
+</resources>

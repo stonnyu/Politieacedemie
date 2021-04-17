@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "794523480505",
+    "firebase_url": "https://pmd-politie.firebaseio.com",
+    "project_id": "pmd-politie",
+    "storage_bucket": "pmd-politie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794523480505:android:ac478a00731dbe85624668",
+        "android_client_info": {
+          "package_name": "tech.tucano.pmp_politie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794523480505-a16njmjalo3oeamoav32nr0lku9q91af.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.tucano.pmp_politie",
+            "certificate_hash": "258cd38059e60400b04c3fc86195155f20abe61e"
+          }
+        },
+        {
+          "client_id": "794523480505-lta6sfurknple28qq0j6tqs27ev2c7vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxQmIARNBTWxpL27PrkdDE-1sgsnpSnl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794523480505-lta6sfurknple28qq0j6tqs27ev2c7vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

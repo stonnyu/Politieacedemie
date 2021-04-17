@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_graph"
+    app:startDestination="@id/loginSelectFragment">
+
+    <fragment
+        android:id="@+id/loginSelectFragment"
+        android:name="tech.tucano.pmp_politie.UI.Login.LoginSelectFragment"
+        android:label="AddArticleFragment"
+        tools:layout="@layout/fragment_login_select">
+        <action
+            android:id="@+id/action_loginSelectFragment_to_loginPolitieFragment"
+            app:destination="@id/loginPolitieFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginPolitieFragment"
+        android:name="tech.tucano.pmp_politie.UI.Login.LoginPolitieFragment"
+        android:label="LoginPolitieFragment"
+        tools:layout="@layout/fragment_login_politie">
+        <action
+            android:id="@+id/action_loginPolitieFragment_to_loginSelectFragment"
+            app:destination="@id/loginSelectFragment" />
+    </fragment>
+</navigation>
