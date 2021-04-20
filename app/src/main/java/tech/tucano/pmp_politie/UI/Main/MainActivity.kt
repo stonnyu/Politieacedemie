@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
         mPrefs= getSharedPreferences(getString(R.string.guest), Context.MODE_PRIVATE)
 
 
+        var target = -5
+    val num = 3
+
+target =- num // Noncompliant; target = -3. Is that really what's meant?
+target =+ num // Noncompliant; target = 3
+        
         /**
          * If the guest has logged in, make the nav_view invisible.
          */
