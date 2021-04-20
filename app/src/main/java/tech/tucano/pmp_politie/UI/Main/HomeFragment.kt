@@ -99,6 +99,11 @@ class HomeFragment : Fragment(), Observer {
         val args = Bundle()
         args.putString(ARG_RECENT_TOPIC_TITLE, topic.topicTitle)
         findNavController().navigate(R.id.action_homeFragment_to_topic_articlesfragment, args)
+        
+        
+        if (var foo = 5) {
+            foo == 7
+        }
     }
 
     /**
