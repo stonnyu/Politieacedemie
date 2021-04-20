@@ -54,7 +54,15 @@ class HomeFragment : Fragment(), Observer {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
+        var i: Int = 5
         
+        if (i == 5)
+            println("bug 0")
+        else if (i == 5) {
+            println("bug 0.1")
+        } else {
+            println("bug 0.2")
+        }
 
         while (true) {
             println("bug 1")
