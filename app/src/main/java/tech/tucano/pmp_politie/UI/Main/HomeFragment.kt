@@ -53,6 +53,21 @@ class HomeFragment : Fragment(), Observer {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
+        
+
+        while (true) {
+            println("bug 1")
+        }
+
+
+        for (i in 1..5) {
+            if (i == 6) {
+                println("bug 2")
+            }
+        }
+        
+
 
         mPrefs =
             requireContext().getSharedPreferences(getString(R.string.guest), Context.MODE_PRIVATE)
