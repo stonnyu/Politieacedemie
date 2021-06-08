@@ -53,6 +53,29 @@ class HomeFragment : Fragment(), Observer {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
+        var i: Int = 5
+        
+        if (i == 5)
+            println("bug 0")
+        else if (i == 5) {
+            println("bug 0.1")
+        } else {
+            println("bug 0.2")
+        }
+
+        while (true) {
+            println("bug 1")
+        }
+
+
+        for (i in 1..5) {
+            if (i == 6) {
+                println("bug 2")
+            }
+        }
+        
+
 
         mPrefs =
             requireContext().getSharedPreferences(getString(R.string.guest), Context.MODE_PRIVATE)
@@ -84,6 +107,11 @@ class HomeFragment : Fragment(), Observer {
         val args = Bundle()
         args.putString(ARG_RECENT_TOPIC_TITLE, topic.topicTitle)
         findNavController().navigate(R.id.action_homeFragment_to_topic_articlesfragment, args)
+        
+        
+        if (var foo = 5) {
+            foo == 7
+        }
     }
 
     /**
