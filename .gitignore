@@ -9,6 +9,7 @@
 /.idea/assetWizardSettings.xml
 .DS_Store
 /build
+/android-sdk-linux
 /captures
 .externalNativeBuild
 .cxx

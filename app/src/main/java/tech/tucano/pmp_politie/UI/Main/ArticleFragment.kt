@@ -16,6 +16,7 @@ import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.fragment_article.*
 import tech.tucano.pmp_politie.R
+import tech.tucano.pmp_politie.Util.EspressoIdlingResource
 import tech.tucano.pmp_politie.databinding.FragmentArticleBinding
 
 const val ARG_RECENT_ARTICLE_TITLE = "arg_recent_article_title"
@@ -45,6 +46,7 @@ class ArticleFragment : Fragment() {
         
         articleId = arguments?.getString(ARG_RECENT_ARTICLE_ID)
 
+        EspressoIdlingResource.increment()
         setupArticlePage()
 
         if(requireContext().getSharedPreferences(getString(R.string.guest), Context.MODE_PRIVATE)
@@ -66,6 +68,7 @@ class ArticleFragment : Fragment() {
             alertDialog.setPositiveButton(getString(R.string.yes)) { _, _ -> deleteArticle()}
             alertDialog.show()
         }
+        EspressoIdlingResource.decrement()
     }
 
     private fun deleteArticle() {

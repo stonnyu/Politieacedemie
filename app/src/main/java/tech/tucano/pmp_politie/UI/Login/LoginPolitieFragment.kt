@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.fragment_login_politie.*
 import tech.tucano.pmp_politie.DataModel.ConfidentialTopicModel
 import tech.tucano.pmp_politie.R
 import tech.tucano.pmp_politie.UI.Main.MainActivity
+import tech.tucano.pmp_politie.Util.EspressoIdlingResource
 import tech.tucano.pmp_politie.databinding.FragmentLoginPolitieBinding
 import java.util.*
 import java.util.regex.Pattern
@@ -88,6 +89,7 @@ class LoginPolitieFragment : Fragment() {
             return
         }
 
+        EspressoIdlingResource.increment()
         //Attempt to sign in using user credentials.
         auth.signInWithEmailAndPassword(etEmail.text.toString(), etPassword.text.toString())
             .addOnCompleteListener { task ->
@@ -123,8 +125,8 @@ class LoginPolitieFragment : Fragment() {
                     ).show()
                     Log.w(ContentValues.TAG, "signInWithEmail:failure", task.exception)
                 }
+                EspressoIdlingResource.decrement()
             }
-
     }
 
 

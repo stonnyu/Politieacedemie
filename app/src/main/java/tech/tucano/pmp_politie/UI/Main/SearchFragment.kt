@@ -24,6 +24,7 @@ import tech.tucano.pmp_politie.Adapters.SearchListAdapter
 import tech.tucano.pmp_politie.DataModel.Article
 import tech.tucano.pmp_politie.DataModel.SearchModel
 import tech.tucano.pmp_politie.R
+import tech.tucano.pmp_politie.Util.EspressoIdlingResource
 import tech.tucano.pmp_politie.databinding.FragmentSearchBinding
 import java.util.*
 import kotlin.collections.ArrayList
@@ -73,7 +74,10 @@ class SearchFragment: Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val searchText: String = search_field.text.toString()
                 //Search in firestore
+                EspressoIdlingResource.increment()
                 searchinFirestore(searchText)
+                Thread.sleep(1000)
+                EspressoIdlingResource.decrement()
             }
         })
     }
@@ -91,7 +95,6 @@ class SearchFragment: Fragment() {
      * searches in firestore with query
      */
     private  fun searchinFirestore(searchText: String){
-
         val suggestions: ArrayList<SearchModel> = ArrayList()
         val tagsReferences = FirebaseDatabase.getInstance().getReference().child("Article")
         tagsReferences.addListenerForSingleValueEvent(object : ValueEventListener {

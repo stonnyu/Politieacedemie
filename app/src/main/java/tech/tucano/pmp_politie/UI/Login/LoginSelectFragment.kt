@@ -56,12 +56,4 @@ class LoginSelectFragment : Fragment() {
         if (currentUser != null) {
             auth.signOut()}
     }
-
-    override fun onStart() {
-        super.onStart()
-
-        if(mPrefs.getString(getString(R.string.guest), false.toString()) == true.toString()){
-            startActivity(Intent(context, MainActivity::class.java))
-        }
-    }
 }

@@ -30,6 +30,7 @@ import tech.tucano.pmp_politie.DataModel.ArticleModel
 import tech.tucano.pmp_politie.DataModel.ConfidentialTopicModel
 import tech.tucano.pmp_politie.DataModel.TopicModel
 import tech.tucano.pmp_politie.R
+import tech.tucano.pmp_politie.Util.EspressoIdlingResource
 import tech.tucano.pmp_politie.databinding.FragmentAddArticleBinding
 import java.io.IOException
 import java.util.*
@@ -89,7 +90,10 @@ class AddArticleFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        EspressoIdlingResource.increment()
         setup()
+        Thread.sleep(1000)
+        EspressoIdlingResource.decrement()
     }
 
     private fun setup() {

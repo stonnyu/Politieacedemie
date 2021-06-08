@@ -165,7 +165,7 @@ class HomeFragment : Fragment(), Observer {
     private fun setRecentArticles() {
         recentArticles.clear()
 
-        val articleData = ArticleModel.getData()!!
+        val articleData = ArticleModel.getData()!!.reversed()
         val user = auth.currentUser
 
         if (articleData != null) {
@@ -191,7 +191,7 @@ class HomeFragment : Fragment(), Observer {
         this@HomeFragment.recentArticles.clear()
         this@HomeFragment.topics.clear()
 
-        val articleData = ArticleModel.getData()!!
+        val articleData = ArticleModel.getData()!!.reversed()
 
         if (articleData != null) {
             for (article in articleData) {
