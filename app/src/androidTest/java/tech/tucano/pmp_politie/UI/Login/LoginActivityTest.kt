@@ -13,6 +13,10 @@ import org.junit.runner.RunWith
 import tech.tucano.pmp_politie.R
 import tech.tucano.pmp_politie.Util.EspressoIdlingResource
 
+private const val ADMIN_EMAIL_FILE = "admin@politie.nl"
+private const val ADMIN_PASSWORD_FILE = "admin123"
+
+private const val FAKE_EMAIL_FILE = "admin@politie.nl"
 
 @RunWith(AndroidJUnit4ClassRunner::class)
 class LoginActivityTest {
@@ -38,8 +42,8 @@ class LoginActivityTest {
     @Test
     fun test_login_admin() {
         // Information needed for the test
-        val username = "admin@politie.nl";
-        val password = "admin123";
+        val username = ADMIN_EMAIL_FILE;
+        val password = ADMIN_PASSWORD_FILE;
 
         // Enter user information
         onView(withId(R.id.etEmail))
@@ -56,7 +60,7 @@ class LoginActivityTest {
     @Test
     fun test_email_domain() {
         // Information needed for the test
-        val username = "admin@gmail.com"
+        val username = ADMIN_EMAIL_FILE
         val errorMessage = "Voer een geldig emailadres in."
 
         // Fill in email with invalid domain
@@ -80,8 +84,8 @@ class LoginActivityTest {
     @Test
     fun test_wrong_credentials() {
         // Information needed for the test
-        val username = "marcio.fuckner@politie.nl";
-        val password = "ImRobocop";
+        val username = FAKE_EMAIL_FILE;
+        val password = ADMIN_PASSWORD_FILE;
 
         // Enter user information
         onView(withId(R.id.etEmail))
