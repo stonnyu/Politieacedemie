@@ -94,9 +94,9 @@ class SearchFragment: Fragment() {
     /**
      * searches in firestore with query
      */
-    private  fun searchinFirestore(searchText: String){
+    private fun searchinFirestore(searchText: String) {
         val suggestions: ArrayList<SearchModel> = ArrayList()
-        val tagsReferences = FirebaseDatabase.getInstance().getReference().child("Article")
+        val tagsReferences = FirebaseDatabase.getInstance().reference.child("Article")
         tagsReferences.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (snapshot: DataSnapshot in dataSnapshot.children) {
@@ -105,18 +105,9 @@ class SearchFragment: Fragment() {
                         if (article.articleTitle!!.toLowerCase(Locale.ROOT)
                                 .contains(searchText.toLowerCase())
                         ) {
-                            if (article.classified) {
-                                if (article.classified && (mPrefs.getString(getString(R.string.guest),
-                                        false.toString()) == false.toString()
-                                            )
-                                ) {
-                                    suggestions.add(
-                                        SearchModel(
-                                            article.articleTitle!!,
-                                            article.id
-                                        )
-                                    )
-                                }
+                            if (article.classified && (mPrefs.getString(getString(R.string.guest),
+                                    false.toString()) == false.toString())
+                            ) {
                             } else {
                                 suggestions.add(
                                     SearchModel(
@@ -125,7 +116,6 @@ class SearchFragment: Fragment() {
                                     )
                                 )
                             }
-                            Log.v("TAG", Article(snapshot).articleTitle!!)
                         }
                     } catch (e: Exception) {
                         e.printStackTrace()
@@ -135,6 +125,7 @@ class SearchFragment: Fragment() {
                 searchList.addAll(suggestions)
                 searchListAdapter.notifyDataSetChanged()
             }
+
             override fun onCancelled(error: DatabaseError) {
 
             }
