@@ -105,17 +105,14 @@ class SearchFragment: Fragment() {
                         if (article.articleTitle!!.toLowerCase(Locale.ROOT)
                                 .contains(searchText.toLowerCase())
                         ) {
-                            if (article.classified && (mPrefs.getString(getString(R.string.guest),
-                                    false.toString()) == false.toString())
+                            if (article.classified && mPrefs.getBoolean(getString(R.string.guest),
+                                    true)
                             ) {
+                                setupSearch(article, suggestions)
                             } else {
-                                suggestions.add(
-                                    SearchModel(
-                                        article.articleTitle!!,
-                                        article.id
-                                    )
-                                )
+                                setupSearch(article, suggestions)
                             }
+                            Log.v("TAG", Article(snapshot).articleTitle!!)
                         }
                     } catch (e: Exception) {
                         e.printStackTrace()
@@ -125,11 +122,19 @@ class SearchFragment: Fragment() {
                 searchList.addAll(suggestions)
                 searchListAdapter.notifyDataSetChanged()
             }
-
             override fun onCancelled(error: DatabaseError) {
 
             }
         })
+    }
+
+    fun setupSearch(article: Article, suggestions: ArrayList<SearchModel> = ArrayList()) {
+        suggestions.add(
+            SearchModel(
+                article.articleTitle!!,
+                article.id
+            )
+        )
     }
 
     fun Fragment.hideKeyboard() {
