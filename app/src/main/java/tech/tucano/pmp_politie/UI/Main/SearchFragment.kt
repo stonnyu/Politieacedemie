@@ -109,7 +109,7 @@ class SearchFragment: Fragment() {
                                     true)
                             ) {
                                 setupSearch(article, suggestions)
-                            } else {
+                            } else if (!article.classified){
                                 setupSearch(article, suggestions)
                             }
                             Log.v("TAG", Article(snapshot).articleTitle!!)
