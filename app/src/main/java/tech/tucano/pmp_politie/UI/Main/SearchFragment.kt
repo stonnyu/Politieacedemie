@@ -105,8 +105,7 @@ class SearchFragment: Fragment() {
                         if (article.articleTitle!!.toLowerCase(Locale.ROOT)
                                 .contains(searchText.toLowerCase())
                         ) {
-                            if (article.classified && mPrefs.getBoolean(getString(R.string.guest),
-                                    true)
+                            if (article.classified && mPrefs.getString(getString(R.string.guest),"false").equals("false")
                             ) {
                                 setupSearch(article, suggestions)
                             } else if (!article.classified){
