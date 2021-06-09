@@ -102,17 +102,25 @@ class SearchFragment: Fragment() {
                 for (snapshot: DataSnapshot in dataSnapshot.children) {
                     val article = Article(snapshot)
                     try {
-                        if (article.articleTitle!!.toLowerCase(Locale.ROOT)
-                                .contains(searchText.toLowerCase())
-                        ) {
-                            if (article.classified && mPrefs.getBoolean(getString(R.string.guest),
-                                    true)
+                        if (article.classified) {
+                            if (article.classified && (mPrefs.getString(getString(R.string.guest),
+                                    false.toString()) == false.toString()
+                                        )
                             ) {
-                                setupSearch(article, suggestions)
-                            } else if (!article.classified){
-                                setupSearch(article, suggestions)
+                                suggestions.add(
+                                    SearchModel(
+                                        article.articleTitle!!,
+                                        article.id
+                                    )
+                                )
                             }
-                            Log.v("TAG", Article(snapshot).articleTitle!!)
+                        } else {
+                            suggestions.add(
+                                SearchModel(
+                                    article.articleTitle!!,
+                                    article.id
+                                )
+                            )
                         }
                     } catch (e: Exception) {
                         e.printStackTrace()
@@ -128,14 +136,14 @@ class SearchFragment: Fragment() {
         })
     }
 
-    fun setupSearch(article: Article, suggestions: ArrayList<SearchModel> = ArrayList()) {
-        suggestions.add(
-            SearchModel(
-                article.articleTitle!!,
-                article.id
-            )
-        )
-    }
+//     fun setupSearch(article: Article, suggestions: ArrayList<SearchModel> = ArrayList()) {
+//         suggestions.add(
+//             SearchModel(
+//                 article.articleTitle!!,
+//                 article.id
+//             )
+//         )
+//     }
 
     fun Fragment.hideKeyboard() {
         view?.let { activity?.hideKeyboard(it) }
